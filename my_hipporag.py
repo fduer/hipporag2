@@ -138,7 +138,7 @@ def llm_pipline():
     # Initialize the llm model
     limits = httpx.Limits(max_keepalive_connections=8, max_connections=8)
     client = httpx.Client(limits=limits, timeout=httpx.Timeout(5*60, read=5*60))
-    model = AzureOpenAI(azure_endpoint ="https://hkust.azure-api.net", api_key="930f00cfa6964ef98bb5cf38ad4c10da", api_version = "2024-05-01-preview", http_client=client)
+    model = AzureOpenAI(azure_endpoint ="https://hkust.azure-api.net", api_key="YOUR-API-KEY", api_version = "2024-05-01-preview", http_client=client)
     return model
 
 def llm_infer(llm, model_name, messages):
