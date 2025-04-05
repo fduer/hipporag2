@@ -28,6 +28,7 @@ from igraph import Graph
 import igraph as ig
 
 import re
+import string
 # 使用2张GPU
 os.environ["CUDA_VISIBLE_DEVICES"] = "0,1"
 
